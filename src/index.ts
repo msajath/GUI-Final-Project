@@ -1,0 +1,33 @@
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
+import ProductDetailView from '../views/ProductDetailView.vue'
+import CartView from '../views/CartView.vue'
+import WishlistView from '../views/WishlistView.vue'
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView,
+    },
+    {
+      path: '/product/:id',
+      name: 'product-detail',
+      component: ProductDetailView,
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: CartView,
+    },
+    {
+      path: '/wishlist',
+      name: 'wishlist',
+      component: WishlistView,
+    },
+  ],
+})
+
+export default router
